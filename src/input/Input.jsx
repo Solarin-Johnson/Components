@@ -9,6 +9,9 @@ function Input() {
     const inputText = (e) => {
         setInput(e.target.value)
     }
+
+    
+
     const resize = ()=> {
         if(resized){
             isMoved('')
@@ -19,12 +22,14 @@ function Input() {
     }
     const check = ()=> {
         setResized(false)
-        isMoved('')
+        if(!input.length > 0){
+            isMoved('')
+        }
     }
     return(
-        <label onClick={resize} className="container">
+        <label  onClick={resize} className="container">
             <input value={input} onChange={inputText} onBlur={check} type="text" />
-            <span id="placeholder" onClick={resize} className={moved} >Text</span>
+            <span id="placeholder" className={moved} >Text</span>
         </label>
     )
 }
