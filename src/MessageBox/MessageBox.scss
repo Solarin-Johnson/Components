@@ -1,0 +1,37 @@
+.notifyContainer {
+  width: 100vw;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.customalert {
+  width: auto;
+  height: auto;
+  line-height: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  display: grid;
+  justify-self: center;
+  background-color: #161b22;
+  border: 1px solid #ffffff17;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  animation: slide 0.4s linear;
+}
+
+@keyframes slide {
+  from {
+    margin-bottom: -40px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 40px;
+    opacity: 1;
+  }
+}

@@ -1,9 +1,10 @@
 import Input from './input/Input'
 import './App.css'
+import MessageBox from './MessageBox/MessageBox';
 
 function App() {
   return (
-    <Input />
+    <MessageBox message='Link to Website Blablabla' />
   );
 }
 
